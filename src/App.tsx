@@ -1,28 +1,27 @@
-
 import './App.css'
 import {
     BrowserRouter as Router,
     Routes,
-    Route, Navigate,
-} from "react-router-dom";
-import Login from "./pages/login";
+    Route,
+    Navigate,
+} from 'react-router-dom'
+import Login from './pages/login'
 
 function App() {
-const res = '123'
-  return (
-    <>
-        <Router>
-            <Routes>
-                <Route path="/login" element={<Login />} />
+    return (
+        <>
+            <Router>
+                <Routes>
+                    <Route path="/login" element={<Login />} />
 
-                <Route
-                    path="*"
-                    element={<Navigate to="/login" replace />}
-                />
-            </Routes>
-        </Router>
-    </>
-  )
+                    <Route
+                        path="*"
+                        element={<Navigate to="/login" replace />}
+                    />
+                </Routes>
+            </Router>
+        </>
+    )
 }
 
 export default App
